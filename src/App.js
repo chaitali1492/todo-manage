@@ -1,3 +1,4 @@
+import { Container } from "@mui/material";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -7,7 +8,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/' exact component={Home} />
+        <Container maxWidth="md">
+          <Route path='/' exact component={Home} />
+        </Container>
       </Switch>
     </Router>
   );
